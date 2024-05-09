@@ -272,14 +272,14 @@ jobs:
       - name: 整理固件
         id: organize
         run: |
-        cd openwrt
-        mkdir outfile
-        cp -rf bin/targets/*/*/*.tar ./outfile
-        cp -rf bin/targets/*/*/*.xz ./outfile
-        cp -rf .config ./outfile/config.txt
-        rm -rf bin/targets/*/*/packages
+          cd openwrt
+          mkdir outfile
+          cp -rf bin/targets/*/*/*.tar ./outfile
+          cp -rf bin/targets/*/*/*.xz ./outfile
+          cp -rf .config ./outfile/config.txt
+          rm -rf bin/targets/*/*/packages
         
-        cd outfile
+          cd outfile
           if [[ $REPO_URL == *"immortalwrt"* ]]; then
             gzip *.tar
           fi
