@@ -49,6 +49,7 @@ git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-tur
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-passwall
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-passwall2
 
+git clone --depth=1 https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic package/uci-app-unblockneteasemusic
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
 git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
