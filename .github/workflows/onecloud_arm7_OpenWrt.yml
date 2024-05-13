@@ -79,8 +79,8 @@ jobs:
         chmod +x ./AmlImg
         curl -L -o ./uboot.img https://github.com/rmoyulong/u-boot-onecloud/releases/download/Onecloud_Uboot_23.12.24_18.15.09/eMMC.burn.img
         mkdir -p openwrt/out 
-        curl -L -o openwrt/out/onecloud.img.gz https://github.com/rmoyulong/OneCloud_OpenWrt/releases/download/OpenWrt_lede_23.12.14_11.28.52/openwrt-20231214_dcae11a46d.img.gz
-        
+        #curl -L -o openwrt/out/onecloud.img.gz https://github.com/rmoyulong/OneCloud_OpenWrt/releases/download/OpenWrt_lede_23.12.14_11.28.52/openwrt-20231214_dcae11a46d.img.gz
+        curl -L -o openwrt/out/onecloud.img.gz  http://1s34s28792.oicp.vip:53388/#s/-aXKTMvQ
         idtype=0
         if [[ $idtype == 0 ]]; then
           echo "OWRT_TYPE=[迷你版]" >> $GITHUB_ENV
