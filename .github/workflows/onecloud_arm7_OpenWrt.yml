@@ -51,18 +51,18 @@ jobs:
         echo "--------------------------硬盘信息--------------------------"
         echo "硬盘数量：$(ls /dev/sd* | grep -v [1-9] | wc -l)" && df -hT  
         
-    - name: 编译环境
-      env:
-        DEBIAN_FRONTEND: noninteractive
-      run: |
-        #sudo rm /etc/apt/sources.list.d/microsoft-prod.list
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
-        sudo bash -c 'bash <(curl -s https://build-scripts.immortalwrt.eu.org/init_build_environment.sh)'
-        sudo timedatectl set-timezone "$TZ"
-        git config --global user.email "1052672227@qq.com"
-        git config --global user.name "shiyu1314"
-        sudo mkdir -p /workdir
-        sudo chown $USER:$GROUPS /workdir
+#    - name: 编译环境
+#      env:
+#        DEBIAN_FRONTEND: noninteractive
+#      run: |
+#        #sudo rm /etc/apt/sources.list.d/microsoft-prod.list
+#        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+#        sudo bash -c 'bash <(curl -s https://build-scripts.immortalwrt.eu.org/init_build_environment.sh)'
+#        sudo timedatectl set-timezone "$TZ"
+#        git config --global user.email "1052672227@qq.com"
+#        git config --global user.name "shiyu1314"
+#        sudo mkdir -p /workdir
+#        sudo chown $USER:$GROUPS /workdir
 
     - name: 克隆源代码
       working-directory: /workdir
